@@ -5,11 +5,11 @@ function MakeCalls() {
 
   // const number=  import.meta.env.PHONE_NUMBER
   // const whatsappNumber = import.meta.env.WHATSAPP_NUMBER
-  const number=  +919705309118
-  const whatsappNumber = 9381235807
+  const number=  "+919705309118"
+  const whatsappNumber = "919381235807"
 
 
-  const message = "Hello, I need assistance!"; // Your custom message
+  const message = "Hello, Send this message !"; // Your custom message
 
   const sendmessage = () => {
     const encodedMessage = encodeURIComponent(message); // Encode special characters
@@ -29,7 +29,9 @@ function MakeCalls() {
     
       <div className="flex flex-col items-center justify-center gap-5 mt-6 md:flex-row"><a
               className="inline-block w-auto text-center min-w-[200px] px-6 py-4 text-white  rounded-md shadow-xl sm:w-auto bg-blue-500  hover:bg-red-500 cursor-pointer"
-            onClick={()=>window.open(`https://wa.me/${number}`, "_blank")}
+            onClick={()=>window.location.href = `tel:${number}`}
+              
+              // window.open(`https://wa.me/${number}`, "_blank")}
               
               // window.location.href = `tel:${number}`}
               >call {number}
