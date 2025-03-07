@@ -20,8 +20,8 @@ function MakeCalls() {
   return (
     <>
 <div className="flex w-full justify-center items-center dark:bg-gray-100 h-60">
-  <div className="text-center max-w-6xl mx-10">
-      <h1 className="my-3 text-3xl font-bold tracking-tight text-black md:text-5xl ">
+  <div className="text-center max-w-6xl  mx-10">
+      <h1 className="my-5 text-3xl font-bold tracking-tight text-black md:text-5xl ">
           Best Service
           Offered Here
       </h1>

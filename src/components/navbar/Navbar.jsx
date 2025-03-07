@@ -7,7 +7,7 @@ function Navbar() {
 
   const [isOpen, setIsOpen] = useState(false);
   const navagate = useNavigate()
-  const number=  9381235807
+  const number=9381235807
   
 
 
@@ -26,7 +26,7 @@ function Navbar() {
         {/* Logo */}
         <h1 className="text-black font-bold text-3xl cursor-pointer "
         onClick={()=>navagate("/")}
-        >Logo</h1>
+        >Cardiology</h1>
 
         {/* Mobile Menu Button */}
         <button className="md:hidden text-black" onClick={() => setIsOpen(!isOpen)}>
@@ -54,9 +54,17 @@ function Navbar() {
         </ul>
 
         {/* Company Name */}
-        <div className="hidden md:block">
+        {/* whats app cals  */}
+        {/* <div className="hidden md:block">
           <h1 className="text-black font-bold cursor-pointer bg-red-500 p-2 rounded-lg"
           onClick={()=>window.location.href = `tel:${number}`}
+          >call {number} </h1>
+        </div> */}
+
+        {/* phone calls */}
+         <div className="hidden md:block">
+          <h1 className="text-black font-bold cursor-pointer bg-red-500 p-2 rounded-lg"
+          onClick={()=>window.open = (`tel:${number}`,"_self")}
           >call {number} </h1>
         </div>
       </div>
