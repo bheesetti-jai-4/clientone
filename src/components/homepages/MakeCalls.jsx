@@ -7,9 +7,21 @@ function MakeCalls() {
   // const whatsappNumber = import.meta.env.WHATSAPP_NUMBER
   const number=  "+919705309118"
   const whatsappNumber = "919381235807"
-
-
   const message = "Hello, Send this message !"; // Your custom message
+
+   // Function to detect mobile devices
+   const isMobile = () => {
+    return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  };
+
+  const makeCall = () => {
+    if (isMobile()) {
+      window.location.href = `tel:${number}`; // Redirect to phone dialer on mobile
+    } else {
+      window.open(`https://wa.me/${number}`, "_blank")
+    }
+  };
+
 
   const sendmessage = () => {
     const encodedMessage = encodeURIComponent(message); // Encode special characters
@@ -29,7 +41,8 @@ function MakeCalls() {
     
       <div className="flex flex-col items-center justify-center gap-5 mt-6 md:flex-row"><a
               className="inline-block w-auto text-center min-w-[200px] px-6 py-4 text-white  rounded-md shadow-xl sm:w-auto bg-blue-500  hover:bg-red-500 cursor-pointer"
-            onClick={()=>window.location.href = `tel:${number}`}
+              onClick={makeCall}
+            // onClick={()=>window.location.href = `tel:${number}`}
               
               // window.open(`https://wa.me/${number}`, "_blank")}
               
