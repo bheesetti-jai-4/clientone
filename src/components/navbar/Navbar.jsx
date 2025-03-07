@@ -55,18 +55,18 @@ function Navbar() {
 
         {/* Company Name */}
         {/* whats app cals  */}
-        {/* <div className="hidden md:block">
+        <div className="hidden md:block">
           <h1 className="text-black font-bold cursor-pointer bg-red-500 p-2 rounded-lg"
           onClick={()=>window.location.href = `tel:${number}`}
           >call {number} </h1>
-        </div> */}
+        </div>
 
         {/* phone calls */}
-         <div className="hidden md:block">
+         {/* <div className="hidden md:block">
           <h1 className="text-black font-bold cursor-pointer bg-red-500 p-2 rounded-lg"
           onClick={()=>window.open = (`tel:${number}`,"_self")}
           >call {number} </h1>
-        </div>
+        </div> */}
       </div>
     </nav>
   );
